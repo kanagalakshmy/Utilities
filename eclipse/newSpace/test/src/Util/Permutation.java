@@ -5,7 +5,7 @@ import java.util.List;
 
 import test.Solution;
 
-public class E_Permutation {
+public class Permutation {
 	
 	public List<List<Integer>> permute(int[] nums) {
 		List<Integer> current = new ArrayList<Integer>(nums.length);
@@ -35,7 +35,7 @@ public class E_Permutation {
 
 	public static void main(String args[]) {
 
-		E_Permutation s = new E_Permutation();
+		Permutation s = new Permutation();
 		List<List<Integer>> result = s.permute(new int[] { 1, 2,3});
 
 		for (List<Integer> l : result) {
