@@ -3,10 +3,8 @@ package Util;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.Solution;
-
 public class Permutation {
-	
+
 	public List<List<Integer>> permute(int[] nums) {
 		List<Integer> current = new ArrayList<Integer>(nums.length);
 		for (int i = 0; i < nums.length; i++) {
@@ -23,7 +21,7 @@ public class Permutation {
 			return;
 		}
 
-		//set element at current index at each free position and recur
+		// set element at current index at each free position and recur
 		for (int cur_i = 0; cur_i < nums.length; cur_i++) {
 			if (current.get(cur_i) == null) {
 				current.set(cur_i, nums[index]);
@@ -37,7 +35,7 @@ public class Permutation {
 	public static void main(String args[]) {
 
 		Permutation s = new Permutation();
-		List<List<Integer>> result = s.permute(new int[] { 1, 2,3});
+		List<List<Integer>> result = s.permute(new int[] { 1, 2, 3 });
 
 		for (List<Integer> l : result) {
 			for (Integer e : l)
