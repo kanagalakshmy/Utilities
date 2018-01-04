@@ -18,11 +18,13 @@ public class Permutation {
 	}
 
 	void helper(int[] nums, int index, List<Integer> current, List<List<Integer>> result) {
+		
 		if (index == nums.length) {
 			result.add(new ArrayList<Integer>(current));
 			return;
 		}
 
+		//set current index element in each free position and recur
 		for (int cur_i = 0; cur_i < nums.length; cur_i++) {
 			if (current.get(cur_i) == null) {
 				current.set(cur_i, nums[index]);
